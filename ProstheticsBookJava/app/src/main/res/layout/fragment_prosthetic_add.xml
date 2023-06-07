@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.ProstheticAddFragment"
+    android:background="@color/background_app_color">
+
+    <ImageView
+        android:id="@+id/titleImageView"
+        android:layout_width="232dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/prostheticlogo"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:text="Biyonik Bacağınızın Resmini ve İsmini Giriniz."
+        android:textSize="23sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintBottom_toTopOf="@+id/pAddCardView"
+        app:layout_constraintEnd_toEndOf="@+id/titleImageView"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/titleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/titleImageView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pAddCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="250dp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#b2d8d8"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <ImageView
+                android:id="@+id/imageViewAdd"
+                android:onClick="clickOnGallery"
+                android:layout_width="230dp"
+                android:layout_height="119dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/defaultimage" />
+
+            <EditText
+                android:id="@+id/eTextPnameAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/background_shape"
+                android:ems="1"
+                android:hint="Protezinizin ismini giriniz"
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#37474f"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="italic|normal" />
+
+            <EditText
+                android:id="@+id/eTextTrademarkAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/background_shape"
+                android:hint="Markasını giriniz."
+                android:inputType="text"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#37474f"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="italic|normal" />
+
+            <EditText
+                android:id="@+id/eTextAboutAdd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/background_shape"
+                android:gravity="start"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:padding="@dimen/_10sdp"
+                android:textColor="#37474f"
+                android:textStyle="italic|normal"
+                android:textSize="@dimen/_12sdp"
+                android:hint="Prosthetic About"/>
+
+            <Button
+                android:id="@+id/addBtn"
+                android:onClick="clickOnSaveBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:textStyle="bold|normal"
+                app:backgroundTint="#66b2b2" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
